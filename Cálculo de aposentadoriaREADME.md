@@ -1,7 +1,6 @@
 # Desafio-1-1-Primeiros-passos-com-JS
 1º Desafio Rocktseat - Desafio launchbase.
 
-
 const nome = 'Afonso';
     const sexo = 'M';
     const idade = '48';
