@@ -1,0 +1,17 @@
+# Desafio-1-1-Primeiros-passos-com-JS
+1º Desafio Rocktseat - Desafio launchbase.
+
+
+
+const programador = {
+    nome: "Afonso",
+    idade: "23",
+    tecnologias: [
+        { nome: "Javascript", especialidade: "Web/Mobile"},
+        { nome: "C++", especialidade: "Desktop"}
+    ]
+}
+
+console.log(`O usuário ${programador.nome} tem ${programador.idade
+} anos e usa as tecnologias ${programador.tecnologias[0].nome} com especialidade em ${programador.tecnologias[0].especialidade}`)
+
