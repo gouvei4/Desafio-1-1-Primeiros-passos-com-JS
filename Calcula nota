@@ -1,0 +1,96 @@
+# Desafio-1-1-Primeiros-passos-com-JS
+1º Desafio Rocktseat - Desafio launchbase.
+
+const classA = [
+    {
+        name: "Afonso",
+        grade: 9.8
+    },
+    {
+        name: "Andréia",
+        grade: 10
+    },
+    {
+        name: "Fulano",
+        grade: 2
+    },
+    {
+        name: 'Novo studest',
+        grade: 10
+    }
+]
+
+const classB = [
+    {
+        name: "Cleiton",
+        grade: 6
+    },
+    {
+        name: "Robson",
+        grade: 8
+    },
+    {
+        name: "Ciclano",
+        grade: 2
+    },
+    {
+        name: 'Novo Aluno',
+        grade: 5
+    }
+]
+
+
+function calculateAverage(studests) {
+    let sum = 0;
+
+    for (let i = 0; i < studests.length; i++) {
+        sum = sum + studests[i].grade
+    }
+
+    const average = sum / studests.length
+
+    return average
+
+
+}
+
+const average1 = calculateAverage(classA)
+const average2 = calculateAverage(classB)
+
+function sendMenssage(average, turma) {
+    if (average > 5) {
+        console.log(`${turma} average: ${average}. Congrats.`)
+    } else {
+        console.log(`${turma} average: ${average}. Is not good.`)
+    }
+}
+
+function markAsFlunked(studest) {
+    studest.flunked = false;
+    if (studest.grade < 5) {
+        studest.flunked = true;
+
+    }
+}
+
+
+function sendoFlunkedMessage(studest) {
+    if (studest.flunked) {
+        console.log(`${studest.name} está flunked.`)
+    }
+
+
+}
+
+function studestReprovados(studests) {
+    for (let studest of studests) {
+        markAsFlunked(studest)
+        sendoFlunkedMessage(studest)
+    }
+}
+
+sendMenssage(average1, 'Class A')
+sendMenssage(average2, 'Class B')
+
+studestReprovados(classA)
+studestReprovados(classB)
